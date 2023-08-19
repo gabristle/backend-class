@@ -5,6 +5,7 @@ function fatorial(n){
     }
     return n * fatorial(n-1);
 }
+
 /*2 - Escreva uma função que retorne uma String contendo uma sequência de
 N mensagens do texto informado pelo usuário. O valor de N e a mensagem são
 informados por parâmetro.*/
@@ -50,8 +51,6 @@ function tabuada(num){
     }
     return resTabuada;
 }
-
-console.log(tabuada(5));
 
 /*5 - Escreva uma função que retorne um número fornecido pelo usuário, porém
 invertido. Por exemplo, o usuário fornece o número 875 e a função retorna o número
@@ -103,7 +102,6 @@ function validaTexto(texto){
 /*8 - Escreva uma função que receba um número e retorne uma lista de objetos (id, nome e
 idade) aleatórios gerados dinamicamente. O código deve ser sequencial; use uma lista
 de nomes pré-definida; e gere idades entre 18 e 90 anos.*/
-
 function geradorObjetos(num){
     let nomes = ["Gabriella", "Ana", "Cristina", "João", "Marcos", "Carlos", "Agatha", "Julio", "Luiza", "Antônio", "Julia", "Ronaldo", "Natalia", "Pedro"];
     let listaObj = [];
@@ -111,7 +109,7 @@ function geradorObjetos(num){
     for(let i = 0; i < num; i++){
         let id = i + 1;
         let nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
-        let idade = Math.floor(Math.random() * 72) + 18;
+        let idade = Math.floor(Math.random() * 72 + 1) + 18;
 
         const objetoAleatorio = {
             id : id,
@@ -125,3 +123,20 @@ function geradorObjetos(num){
     return listaObj;
 }
 
+/*9 - Escreva uma função que receba a lista de objetos gerados anteriormente e calcule a
+média de idades das pessoas presentes na lista*/
+function mediaIdades(listaObj){
+    let somaIdades = 0;
+    let media = 0;
+
+    listaObj.forEach(objeto => {
+        somaIdades += objeto.idade;
+    });
+
+    media = somaIdades / listaObj.length;
+
+    return media;
+}
+
+/*10 - Escreva uma função que receba a lista de objetos gerados anteriormente e ordene os
+dados por um dos atributos informados por parâmetros*/
