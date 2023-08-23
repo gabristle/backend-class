@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+:root{
+    --black: #1a1a1c;
+    --ligth-gray: #9f9fa1;
+    --gray: #4e4e50;
+    --pink: #c2083f;
+    --white: #ffffff;
+}
+
+body{
+    background-color: var(--ligth-gray);
+}
+
+main, header, footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.c-card{
+    background-color: var(--black);
+    width: 450px;
+    padding: 3%;
+    border-radius: 15px;
+}
+
+#c-visor--readonly{
+    color: var(--white);
+    background-color: black;
+    width: 100%;
+    border: none;
+    height: 80px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 42px;
+    border-radius: 5px;
+    padding: 0% 5%;
+}
+
+.c-bt--number{
+    background-color: var(--gray);
+}
+
+.c-bt--operator{
+    background-color: var(--pink);
+}
+
+.c-bt--all-clear, .c-bt--equal-sign{
+    background-color: var(--ligth-gray);
+}
+
+.c-bts{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+button{
+    border: none;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: var(--pink);
+}

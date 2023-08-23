@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista DOM - Exercício 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>c a l c u l a t o r</h1>
+    </header>
+    <main>
+        <div class="c-card">
+            <input type="text" value="" readonly id="c-visor--readonly">
+            <br>
+            <div class="c-bts">   
+                <button class="c-bt--number" value="7" onclick="insert('7')">7</button>
+                <button class="c-bt--number" value="8" onclick="insert('8')">8</button>
+                <button class="c-bt--number" value="9" onclick="insert('9')">9</button>
+                <button class="c-bt--operator" value="+" onclick="insert('+')">+</button>
+            
+                <button class="c-bt--number" value="4" onclick="insert('4')">4</button>
+                <button class="c-bt--number" value="5" onclick="insert('5')">5</button>
+                <button class="c-bt--number" value="6" onclick="insert('6')">6</button>
+                <button class="c-bt--operator" value="-" onclick="insert('-')">-</button>
+                
+                
+                <button class="c-bt--number" value="1" onclick="insert('1')">1</button>
+                <button class="c-bt--number" value="2" onclick="insert('2')">2</button>
+                <button class="c-bt--number" value="3" onclick="insert('3')">3</button>
+                <button class="c-bt--operator" value="*" onclick="insert('*')">*</button>
+                
+                
+                <button class="c-bt--number" value="0">0</button>
+                <button class="c-bt--all-clear" value="all-clear" onclick="clearVisor()">AC</button>
+                <button class="c-bt--equal-sign" value="=" onclick="calculate()">=</button>
+                <button class="c-bt--operator" value="/" onclick="insert('/')">%</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <small>calculator coded by <a href="https://github.com/gabristle">gabristle</a></small>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

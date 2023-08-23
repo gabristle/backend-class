@@ -1,21 +1,23 @@
 /*1 - Escreva uma função que calcule e retorne o fatorial de um número.*/
-function fatorial(n){
-    if(n == 1 || n == 0){
+function fatorial(num){
+    if(num == 1 || num == 0){
         return 1;
     }
-    return n * fatorial(n-1);
+    return num * fatorial(num-1);
 }
 
 /*2 - Escreva uma função que retorne uma String contendo uma sequência de
 N mensagens do texto informado pelo usuário. O valor de N e a mensagem são
 informados por parâmetro.*/
-function repeteTexto(n, texto){
-    let textoFinal = "";
-    for(let i = 0; i < n; i++){
-        textoFinal += texto;
+function repeteTexto(num, texto){
+    textoPronto = '';
+
+    for(let i = 0; i < num; i++){
+        textoPronto += texto;
     }
-    return textoFinal;
-}//refazer
+    return textoPronto;
+}
+
 
 /*3 - Escreva uma função que receba 2 valores e uma operação básica: adição, subtração,
 multiplicação e divisão e retorne o resultado da operação.
@@ -46,6 +48,7 @@ function operacoes(num1, num2, operacao){
 número recebido por parâmetro. Cada resultado na respectiva posição do índice*/
 function tabuada(num){
     let resTabuada = [];
+
     for(let i = 1; i <= 10; i++){
         resTabuada[i] = num * i;
     }
@@ -67,6 +70,7 @@ retorna o número 3 (há 3 vogais nessa palavra).*/
 function contaVogal(string){
     let numVogais = 0;
     string = string.toLowerCase();
+
     for(let i = 0; i < string.length; i++){
         if(string[i] == 'a' || string[i] == 'e' || string[i] == 'i' || string[i] == 'o' || string[i] == 'u'){
             numVogais++;
@@ -97,7 +101,7 @@ function validaTexto(texto){
     }
     if(pilha.length > 0) return false;
     else return true;
-}//refazer
+}
 
 /*8 - Escreva uma função que receba um número e retorne uma lista de objetos (id, nome e
 idade) aleatórios gerados dinamicamente. O código deve ser sequencial; use uma lista
